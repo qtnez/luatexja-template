@@ -1,0 +1,49 @@
+#!/usr/bin/env ruby
+# vim:ts=2 sw=2 et
+# charucs.rb : 將所輸入的字轉換成 ucs2/ucs4/utf8/big5 hex.
+# Edward G.J. Lee (06/13/06)
+# 2007/08/29 加入 gb2312
+
+require 'iconv'
+
+pname = File.basename($0)
+if ARGV.length == 0 or ARGV[0] =~ /-*[Hh].*/
+  puts
+  puts "Usage: #{pname} your characters"
+  puts "       Use space to seperate each character."
+  puts
+  exit
+end
+
+locale = `echo $LC_ALL`.chomp
+if locale == ""
+  locale = `echo $LC_CTYPE`.chomp
+  if locale == ""
+    locale = `echo $LANG`.chomp
+  end
+end
+enc = locale.split('.')
+
+def outPut(a, b)
+  printf("UCS2/4 : 0x%X (%d)\n", a[0], a[0])
+  size = b.length
+end
+
+def outPutb5(b = ["na"])
+  puts "Big-5  : 0x" + b[0].to_s.upcase
+end
+
+def outPutgb(g = ["na"])
+  puts "gb2312 : 0x" + g[0].to_s.upcase
+end
+
+ARGV.each do |s|
+  if locale =~ /UTF/i
+    ucs = s.unpack('U*')
+    b5 = Iconv.new('big-5//IGNORE', 'utf-8').iconv(s).unpack('H*')
+    gb = Iconv.new('gb2312//IGNORE', 'utf-8').iconv(s).unpack('H*')
+    outPut(ucs, s)
+  else
+    puts "Please use under UTF-8 locale."
+  end
+end
