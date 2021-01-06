@@ -1,0 +1,23 @@
+南
+\LaTeX
+\begin{document}
+\end{document}
+\documentclass
+\linespread
+一
+丁
+another test.
+國
+家
+果
+% comments
+正
+strokes
+兙
+瓩
+$ math mode
+籲
+This is a test.
+万
+甪
+Strokes
