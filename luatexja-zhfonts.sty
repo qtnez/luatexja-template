@@ -2,6 +2,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{luatexja-zhfonts}[2013/09/10 Setting for Chinese fonts]
 \RequirePackage{luatexja-fontspec}
+\DeclareOption{match}{\PassOptionsToPackage{\CurrentOption}{luatexja-fontspec}}
 
 % SinoType 华文字体
 \DeclareOption{SinoType}{
@@ -82,6 +83,7 @@
 }
 
 % myfont
+% ItalicFeatures={Scale=1.08} 可調整選項參數的字型的 scale。
 \DeclareOption{myfont}{
 \setmainjfont[BoldFont=Noto Sans CJK TC Medium,
               YokoFeatures = {JFM = zh_TW/quanjiao},
