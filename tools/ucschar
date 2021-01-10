@@ -4,7 +4,7 @@
 # Edward G.J. Lee (06/13/06)
 # 加入 UTF-8 locale 條件（08/30/07）
 
-$KCODE='u'
+#$KCODE='u'
 
 locale = `echo $LC_ALL`.chomp
 if locale == ""
