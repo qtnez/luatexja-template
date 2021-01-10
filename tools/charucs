@@ -3,8 +3,7 @@
 # charucs.rb : 將所輸入的字轉換成 ucs2/ucs4/utf8/big5 hex.
 # Edward G.J. Lee (06/13/06)
 # 2007/08/29 加入 gb2312
-
-require 'iconv'
+# remove iconv(obsolate). Now we use UTF-8 locale only.
 
 pname = File.basename($0)
 if ARGV.length == 0 or ARGV[0] =~ /-*[Hh].*/
@@ -29,19 +28,9 @@ def outPut(a, b)
   size = b.length
 end
 
-def outPutb5(b = ["na"])
-  puts "Big-5  : 0x" + b[0].to_s.upcase
-end
-
-def outPutgb(g = ["na"])
-  puts "gb2312 : 0x" + g[0].to_s.upcase
-end
-
 ARGV.each do |s|
   if locale =~ /UTF/i
     ucs = s.unpack('U*')
-    b5 = Iconv.new('big-5//IGNORE', 'utf-8').iconv(s).unpack('H*')
-    gb = Iconv.new('gb2312//IGNORE', 'utf-8').iconv(s).unpack('H*')
     outPut(ucs, s)
   else
     puts "Please use under UTF-8 locale."
