@@ -1,10 +1,10 @@
 #!/usr/bin/env ruby
 # vim:ts=2 sw=2 et
-# uscchar : �N�ҿ�J Unicode �X�ഫ���۹������r�]UTF-8�^
+# uscchar : 將所輸入 Unicode 碼轉換成相對應的字（UTF-8）
 # Edward G.J. Lee (06/13/06)
-# �[�J UTF-8 locale ����]08/30/07�^
+# 加入 UTF-8 locale 條件（08/30/07）
 
-#$KCODE='u'
+$KCODE='u'
 
 locale = `echo $LC_ALL`.chomp
 if locale == ""

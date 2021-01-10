@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 # vim:ts=2 sw=2 et
-# charucs.rb : ±N©Ò¿é¤Jªº¦rÂà´«¦¨ ucs2/ucs4/utf8/big5 hex.
+# charucs.rb : å°‡æ‰€è¼¸å…¥çš„å­—è½‰æ›æˆ ucs2/ucs4/utf8/big5 hex.
 # Edward G.J. Lee (06/13/06)
-# 2007/08/29 ¥[¤J gb2312
+# 2007/08/29 åŠ å…¥ gb2312
 
 require 'iconv'
 
