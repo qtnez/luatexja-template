@@ -25,7 +25,6 @@ enc = locale.split('.')
 
 def outPut(a, b)
   printf("UCS2/4 : 0x%X (%d)\n", a[0], a[0])
-  size = b.length
 end
 
 ARGV.each do |s|
