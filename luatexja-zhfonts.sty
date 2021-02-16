@@ -89,6 +89,8 @@
               YokoFeatures = {JFM = zh_TW/quanjiao},
               AltFont={{Range="20000-"2A6DF,Font=HanaMinB},
                        {Range="2A700-"2B73F,Font=HanaMinB},
+                       {Range="FF1F-"FF1F,Font=HanaMinA},
+                       {Range="FF01-"FF01,Font=HanaMinA},
                        {Range="2B740-"2B81F,Font=HanaMinB}},
               BoldItalicFont=I.Ngaan,
               ItalicFont=TW-MOE-Std-Kai]{I.MingCP}
@@ -103,6 +105,7 @@
 % 防止有些字一點明體沒有時取用。
 \newjfontfamily\hminga{HanaMinA}
 \newjfontfamily\hmingb{HanaMinB}
+\newjfontfamily\nming{Noto Serif CJK TC Light}
 % \textit{\textbf{}} 太麻煩，另定義一個簡單指令。
 % 注意！要用 {\iyan 中文} 的方式取用。
 \newjfontfamily\iyan{I.Ngaan}
