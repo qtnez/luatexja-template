@@ -1,10 +1,9 @@
-% luatexja-zhfonts.sty
+% ltj-zhfonts.sty
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{luatexja-zhfonts}[2013/09/10 Setting for Chinese fonts]
-\RequirePackage{luatexja-fontspec}
-\DeclareOption{match}{\PassOptionsToPackage{\CurrentOption}{luatexja-fontspec}}
+\ProvidesPackage{ltj-zhfonts}[2021/02/21 Setting for Chinese fonts]
+\RequirePackage[match]{luatexja-fontspec}
 
-% SinoType 华文字体
+% SinoType 華文字體
 \DeclareOption{SinoType}{
 \setmainjfont[BoldFont=STZhongsong]{STSong}
 \setsansjfont[BoldFont=STXihei]{STXihei}
@@ -12,7 +11,7 @@
 \newjfontface\fang{STFangsong}
 }
 
-% ZhongYi 中易字体
+% ZhongYi 中易字體
 \DeclareOption{ZhongYi}{
 \setmainjfont[BoldFont=SimHei]{SimSun}
 \setsansjfont[BoldFont=SimHei]{SimHei}
@@ -20,7 +19,7 @@
 \newjfontface\fang{FangSong}
 }
 
-% Adobe Adobe字体
+% Adobe Adobe字體
 \DeclareOption{Adobe}{
 \setmainjfont[BoldFont=AdobeHeitiStd-Regular]{AdobeSongStd-Light}
 \setsansjfont[BoldFont=AdobeHeitiStd-Regular]{AdobeHeitiStd-Regular}
@@ -28,7 +27,7 @@
 \newjfontface\fang{AdobeFangsongStd-Regular}
 }
 
-% Founder 方正字体
+% Founder 方正字體
 \DeclareOption{Founder}{
 \setmainjfont[BoldFont=FZXiaoBiaoSong-B05]{FZShuSong-Z01}
 \setsansjfont[BoldFont=FZHei-B01]{FZHei-B01}
@@ -36,14 +35,14 @@
 \newjfontface\fang{FZFangSong-Z02}
 }
 
-% HanYi-J 汉仪字体-文房字宝-简体
-% HanYi-F 汉仪字体-文房字宝-繁体
-% 书宋一简 HYA9GJM.ttf
-% 中宋简　 HYA3GJM.ttf
-% 中黑简　 HYB1GJM.ttf
-% 粗黑简　 HYB9GJM.ttf
-% 楷体简　 HYC1GJM.ttf
-% 仿宋简　 HYD1GJM.ttf
+% HanYi-J 漢儀字體-文房字寶-簡體
+% HanYi-F 漢儀字體-文房字寶-繁體
+% 書宋一簡 HYA9GJM.ttf
+% 中宋簡　 HYA3GJM.ttf
+% 中黑簡　 HYB1GJM.ttf
+% 粗黑簡　 HYB9GJM.ttf
+% 楷體簡　 HYC1GJM.ttf
+% 仿宋簡　 HYD1GJM.ttf
 \DeclareOption{HanYi-J}{
 \setmainjfont[BoldFont=HYA9GJM.ttf]{HYA3GJM.ttf}
 \setsansjfont[BoldFont=HYB9GJM.ttf]{HYB1GJM.ttf}
