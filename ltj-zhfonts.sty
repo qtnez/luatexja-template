@@ -1,9 +1,8 @@
-% luatexja-zhfonts.sty
+% ltj-zhfonts.sty
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{ltj-zhfonts}[2021/02/21 Setting for Chinese fonts]
 \RequirePackage[match]{luatexja-fontspec}
-%\DeclareOption{match}{\PassOptionsToPackage{\CurrentOption}{luatexja-fontspec}}
-%\PassOptionsToPackage{match}{luatexja-fontspec}
+\RequirePackage[bf,sf]{titlesec}
 
 % SinoType 华文字体
 \DeclareOption{SinoType}{
