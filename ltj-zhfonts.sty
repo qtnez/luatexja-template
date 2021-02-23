@@ -1,6 +1,6 @@
 % ltj-zhfonts.sty
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{ltj-zhfonts}[2021/02/21 Setting for Chinese fonts]
+\ProvidesPackage{ltj-zhfonts}[2021/02/21 chinese fonts for lualatex]
 \RequirePackage[match]{luatexja-fontspec}
 \RequirePackage[bf,sf]{titlesec}
 
@@ -80,6 +80,14 @@
 \setsansjfont[BoldFont=AR NewHeiB5 Bold]{AR HeiU30}
 \newjfontface\kai{AR StdkaiU30}
 \newjfontface\fang[BoldFont=AR FangSongB5 Bold]{AR FangSongB5}
+}
+
+% 華康字型
+\DeclareOption{dyna}{
+\setmainjfont[BoldFont=DFT_B5.ttc]{DFT_M3.ttc}
+\setsansjfont[BoldFont=DFT_B5.ttc]{DFT_B3.ttc}
+\newjfontface\kai{DFT_BK5.ttc}
+\newjfontface\fang[BoldFont=DFT_F4.ttc]{DFT_F2.ttc}
 }
 
 % myfont
