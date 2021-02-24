@@ -1,32 +1,7 @@
 % 給網路小說編譯成 pdf 檔使用，a4paper 要指定，不然常會被一些 package 更改
 % 掉，例如 hyperref 會更改成 letters。
 \documentclass[11pt,a4paper]{article}
-% 有了 match 參數，正常 LaTeX 指令取字時，才會去做中文字型的匹配。
-\usepackage[match]{luatexja-fontspec}
-\setmainjfont[BoldFont=Noto Sans CJK TC Medium,
-              YokoFeatures = {JFM = zh_TW/quanjiao},
-              AltFont={{Range="20000-"2A6DF,Font=HanaMinB},  % CJK ExtB
-                       {Range="FF1F-"FF1F,Font=HanaMinA},    %一點明體的驚嘆號及問號過大
-                       {Range="FF01-"FF01,Font=HanaMinA},    %用 HanaMinA 取代
-                       {Range="2A700-"2B73F,Font=HanaMinB},  % CJK ExtC
-                       {Range="2B740-"2B81F,Font=HanaMinB}}, % CJK ExtD
-              BoldItalicFont=I.Ngaan,
-              ItalicFont=TW-MOE-Std-Kai]{I.MingCP}
-\setsansjfont[BoldFont=Noto Sans CJK TC Medium,
-              YokoFeatures = {JFM = zh_TW/quanjiao},
-              BoldItalicFont=I.Ngaan,
-              ItalicFont=TW-MOE-Std-Kai]{Taipei Sans TC Beta Light}
-\setmonojfont[BoldFont=Noto Sans CJK TC Medium,
-              YokoFeatures = {JFM = zh_TW/quanjiao},
-              BoldItalicFont=I.Ngaan,
-              ItalicFont=TW-MOE-Std-Kai]{HanWangFangSongMedium}
-% 防止有些字一點明體沒有時取用。
-\newjfontfamily\hminga{HanaMinA}
-\newjfontfamily\hmingb{HanaMinB}
-% \textit{\textbf{}} 太麻煩，另定義一個簡單指令。
-% 注意！要用 {\iyan 中文} 的方式取用。
-\newjfontfamily\iyan{I.Ngaan}
-\usepackage[bf,sf]{titlesec}
+\usepackage{ltj-zhfonts}
 % unicode-math 速度會慢。
 %\usepackage{unicode-math}
 % osf(old style font) 可以顯示上下參差不齊的數字，但數學模式仍然是使用正常，
