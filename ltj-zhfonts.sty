@@ -1,0 +1,139 @@
+% ltj-zhfonts.sty
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{ltj-zhfonts}[2021/02/21 chinese fonts for lualatex]
+\RequirePackage[match]{luatexja-fontspec}
+\RequirePackage[bf,sf]{titlesec}
+
+% SinoType 华文字体
+\DeclareOption{SinoType}{
+\setmainjfont[BoldFont=STZhongsong]{STSong}
+\setsansjfont[BoldFont=STXihei]{STXihei}
+\newjfontface\kai{STKaiti}
+\newjfontface\fang{STFangsong}
+}
+
+% ZhongYi 中易字体
+\DeclareOption{ZhongYi}{
+\setmainjfont[BoldFont=SimHei]{SimSun}
+\setsansjfont[BoldFont=SimHei]{SimHei}
+\newjfontface\kai{KaiTi}
+\newjfontface\fang{FangSong}
+}
+
+% Adobe Adobe字体
+\DeclareOption{Adobe}{
+\setmainjfont[BoldFont=AdobeHeitiStd-Regular]{AdobeSongStd-Light}
+\setsansjfont[BoldFont=AdobeHeitiStd-Regular]{AdobeHeitiStd-Regular}
+\newjfontface\kai{AdobeKaitiStd-Regular}
+\newjfontface\fang{AdobeFangsongStd-Regular}
+}
+
+% Founder 方正字体
+\DeclareOption{Founder}{
+\setmainjfont[BoldFont=FZXiaoBiaoSong-B05]{FZShuSong-Z01}
+\setsansjfont[BoldFont=FZHei-B01]{FZHei-B01}
+\newjfontface\kai{FZKai-Z03}
+\newjfontface\fang{FZFangSong-Z02}
+}
+
+% HanYi-J 汉仪字体-文房字宝-简体
+% HanYi-F 汉仪字体-文房字宝-繁体
+% 书宋一简 HYA9GJM.ttf
+% 中宋简　 HYA3GJM.ttf
+% 中黑简　 HYB1GJM.ttf
+% 粗黑简　 HYB9GJM.ttf
+% 楷体简　 HYC1GJM.ttf
+% 仿宋简　 HYD1GJM.ttf
+\DeclareOption{HanYi-J}{
+\setmainjfont[BoldFont=HYA9GJM.ttf]{HYA3GJM.ttf}
+\setsansjfont[BoldFont=HYB9GJM.ttf]{HYB1GJM.ttf}
+\newjfontface\kai{HYC1GJM.ttf}
+\newjfontface\fang{HYD1GJM.ttf}
+}
+
+\DeclareOption{HanYi-F}{
+\setmainjfont[BoldFont=HYA9GFM.ttf]{HYA3GFM.ttf}
+\setsansjfont[BoldFont=HYB9GFM.ttf]{HYB1GFM.ttf}
+\newjfontface\kai{HYC1GFM.ttf}
+\newjfontface\fang{HYD1GFM.ttf}
+}
+
+% cwTeX TrueType (in Debian/Ubuntu)
+\DeclareOption{cwttf}{
+\setmainjfont[BoldFont=cwTeXHeiBold]{cwTeXMing}
+\setsansjfont[BoldFont=cwTeXHeiBold]{cwTeXHeiBold}
+\newjfontface\kai{cwTeXKai}
+\newjfontface\fang{cwTeXFangSong}
+}
+
+% cwTeX Q TrueType
+\DeclareOption{cwttfq}{
+\setmainjfont[BoldFont=cwTeX Q Hei Bold]{cwTeX Q Ming Medium}
+\setsansjfont[BoldFont=cwTeX Q Hei Bold]{cwTeX Q Hei Bold}
+\newjfontface\kai{cwTeX Q Kai Medium}
+\newjfontface\fang{cwTeX Q Fangsong Medium}
+}
+
+% 文鼎字型
+\DeclareOption{arphic}{
+\setmainjfont[BoldFont=AR NewHeiB5 Bold]{AR MingU30}
+\setsansjfont[BoldFont=AR NewHeiB5 Bold]{AR HeiU30}
+\newjfontface\kai{AR StdkaiU30}
+\newjfontface\fang[BoldFont=AR FangSongB5 Bold]{AR FangSongB5}
+}
+
+% 華康字型
+\DeclareOption{dyna}{
+\setmainjfont[BoldFont=DFT_B5.ttc]{DFT_M3.ttc}
+\setsansjfont[BoldFont=DFT_B5.ttc]{DFT_B3.ttc}
+\newjfontface\kai{DFT_BK5.ttc}
+\newjfontface\fang[BoldFont=DFT_F4.ttc]{DFT_F2.ttc}
+}
+
+% myfont
+% ItalicFeatures={Scale=1.08} 可調整選項參數的字型的 scale。
+\DeclareOption{myfont}{
+\setmainjfont[BoldFont=Noto Sans CJK TC Medium,
+              YokoFeatures = {JFM = zh_TW/quanjiao},
+              AltFont={{Range="20000-"2A6DF,Font=HanaMinB},
+                       {Range="2A700-"2B73F,Font=HanaMinB},
+                       {Range="2B740-"2B81F,Font=HanaMinB},
+                       {Range="FF1F-"FF1F,Font=HanaMinA},
+                       {Range="FF01-"FF01,Font=HanaMinA},
+                       {Range="3010-"3011,Font=HanaMinA}},
+              BoldItalicFont=I.Ngaan,
+              ItalicFont=TW-MOE-Std-Kai,
+              ItalicFeatures={Scale=1.07}]{I.MingCP}
+\setsansjfont[BoldFont=Noto Sans CJK TC Medium,
+              YokoFeatures = {JFM = zh_TW/quanjiao},
+              BoldItalicFont=I.Ngaan,
+              ItalicFont=TW-MOE-Std-Kai,
+              ItalicFeatures={Scale=1.07}]{Taipei Sans TC Beta Light}
+\setmonojfont[BoldFont=Noto Sans CJK TC Medium,
+              YokoFeatures = {JFM = zh_TW/quanjiao},
+              BoldItalicFont=I.Ngaan,
+              ItalicFont=TW-MOE-Std-Kai,
+              ItalicFeatures={Scale=1.07},Scale=1.08]{cwTeXFangSong}
+% 防止有些字一點明體沒有時取用。
+\newjfontfamily\hminga{HanaMinA}
+\newjfontfamily\hmingb{HanaMinB}
+\newjfontfamily\nming{Noto Serif CJK TC Light}
+% \textit{\textbf{}} 太麻煩，另定義一個簡單指令。
+% 注意！要用 {\iyan 中文} 的方式取用。
+\newjfontfamily\iyan{I.Ngaan}
+\newjfontface\kai{TW-MOE-Std-Kai}[Scale=1.07]
+\newjfontface\fang{cwTeXFangSong}[Scale=1.08]
+}
+
+% Fandol fonts http://fandol-doc.googlecode.com/files/fandol-fonts.7z
+\DeclareOption{Fandol}{
+\setmainjfont[BoldFont=FandolSong-Bold]{FandolSong-Regular}
+\setsansjfont[BoldFont=FandolHei-Bold]{FandolHei-Regular}
+\newjfontface\kai{FandolKai-Regular}
+\newjfontface\fang{FandolFang-Regular}
+}
+
+\ExecuteOptions{myfont}
+
+\ProcessOptions\relax
+\endinput

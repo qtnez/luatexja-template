@@ -1,0 +1,44 @@
+#!/usr/bin/env ruby
+# vim:ts=2 sw=2 et
+# uscchar : 將所輸入 Unicode 碼轉換成相對應的字（UTF-8）
+# Edward G.J. Lee (06/13/06)
+# 加入 UTF-8 locale 條件（08/30/07）
+
+#$KCODE='u'
+
+locale = `echo $LC_ALL`.chomp
+if locale == ""
+  locale = `echo $LC_CTYPE`.chomp
+  if locale == ""
+    locale = `echo $LANG`.chomp
+  end
+end
+enc = locale.split('.')
+
+def uni(str)
+  if str[0,3] == 'uni'
+    str.sub(/uni(\w+)/){[$1.hex].pack('U*')}
+  elsif str[0,1] == 'u' && str[0,3] != 'uni'
+    str.sub(/u(\w+)/){[$1.hex].pack('U*')}
+  elsif str[0,2] == 'U+'
+    str.sub(/U\+(\w+)/){[$1.hex].pack('U*')}
+  else
+    puts "Format not support!"
+    exit
+  end
+end
+
+if locale =~ /UTF/i
+  pname = File.basename($0)
+  if ARGV.length == 0 or ARGV[0] =~ /-*[Hh].*/
+    puts
+    puts "Usage: #{pname} uxxxx(or unixxxx, U+xxxx)"
+    puts "xxxx is UCS-2/4 hex."
+    puts
+    exit
+  end
+  puts uni(ARGV[0])
+else
+  puts "I need UTF-8 locale."
+  exit
+end
