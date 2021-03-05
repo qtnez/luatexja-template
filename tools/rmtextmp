@@ -1,8 +1,0 @@
-#!/bin/sh
-rm -f *.aux *.toc *.log *.dvi *.cjk *.out *.brf *.idx \
-      *.ind *.lof *.lot *.ilg *.exa *.bbl *.blg *.cp \
-      *.cps *.fn *.fns *.ky *.kys *.pg *.pgs *.tp *.tps \
-      *.vr *.vrs *.ac *.acs *.at *.ats *.cv *.cvs *.ms \
-      *.mss *.ov *.ovs *.pr *.prs *.tmp *.ev *.evs *.cm \
-      *.cms *.op *.ops *.tr *.trs *.glo *.tui *.tuo *.nav \
-      *.snm *.tuc
