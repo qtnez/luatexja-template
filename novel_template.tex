@@ -12,21 +12,26 @@
                        {Range="2A700-"2B73F,Font=HanaMinB},  % CJK ExtC
                        {Range="2B740-"2B81F,Font=HanaMinB}}, % CJK ExtD
               BoldItalicFont=I.Ngaan,
-              ItalicFont=TW-MOE-Std-Kai]{I.MingCP}
+              ItalicFont=TW-MOE-Std-Kai,
+              ItalicFeatures={Scale=1.07}]{I.MingCP}
 \setsansjfont[BoldFont=Noto Sans CJK TC Medium,
               YokoFeatures = {JFM = zh_TW/quanjiao},
               BoldItalicFont=I.Ngaan,
-              ItalicFont=TW-MOE-Std-Kai]{Taipei Sans TC Beta Light}
+              ItalicFont=TW-MOE-Std-Kai,
+              ItalicFeatures={Scale=1.07}]{Taipei Sans TC Beta Light}
 \setmonojfont[BoldFont=Noto Sans CJK TC Medium,
               YokoFeatures = {JFM = zh_TW/quanjiao},
               BoldItalicFont=I.Ngaan,
-              ItalicFont=TW-MOE-Std-Kai]{HanWangFangSongMedium}
+              ItalicFont=TW-MOE-Std-Kai,
+              ItalicFeatures={Scale=1.07},Scale=1.08]{cwTeXFangSong}
 % 防止有些字一點明體沒有時取用。
 \setjfontfamily\hminga{HanaMinA}
 \setjfontfamily\hmingb{HanaMinB}
 % \textit{\textbf{}} 太麻煩，另定義一個簡單指令。
 % 注意！要用 {\iyan 中文} 的方式取用。
 \setjfontfamily\iyan{I.Ngaan}
+\setjfontfamily\kai{TW-MOE-Std-Kai}[Scale=1.07]
+\setjfontfamily\fang{cwTeXFangSong}[Scale=1.08]
 \usepackage[bf,sf]{titlesec}
 %unicode-math 會讓編譯速慢，滿暫時不用。
 %\usepackage{unicode-math}
