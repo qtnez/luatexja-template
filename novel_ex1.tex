@@ -1,7 +1,7 @@
 % 給網路小說編譯成 pdf 檔使用，a4paper 要指定，不然常會被一些 package 更改
 % 掉，例如 hyperref 會更改成 letters。
 \documentclass[11pt,a4paper]{article}
-\usepackage{ltj-zhfonts}
+\usepackage[myfont]{ltj-zhfonts}
 % unicode-math 速度會慢。
 %\usepackage{unicode-math}
 % osf(old style font) 可以顯示上下參差不齊的數字，但數學模式仍然是使用正常，
@@ -13,7 +13,7 @@
 \headheight=0.2in
 \footskip=0.2in
 \addtolength{\topmargin}{-1.4in}
-\renewcommand{\baselinestretch}{1.42}
+\renewcommand{\baselinestretch}{1.46}
 
 % 將 section counter 關掉，這樣就不必使用  \section*{}
 \setcounter{secnumdepth}{0}
