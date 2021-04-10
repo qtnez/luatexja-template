@@ -38,13 +38,18 @@
 % osf(old style font) 可以顯示上下參差不齊的數字，但數學模式仍然是使用正常，
 % 這 style 會變動 baseline，因此不適合數學模式。
 %\usepackage[osf]{libertinus}
-\usepackage[nomath]{libertinus}
+\usepackage{libertinus}
 
 \textheight=27.5cm
 \headheight=0.2in
 \footskip=0.2in
 \addtolength{\topmargin}{-1.4in}
 \renewcommand{\baselinestretch}{1.46}
+
+% 中文縮排二個中文字。
+\newlength{\zhind}
+\settowidth{\zhind}{終極}
+\setlength{\parindent}{\zhind}
 
 % 將 section counter 關掉，這樣就不必使用  \section*{}
 \setcounter{secnumdepth}{0}
