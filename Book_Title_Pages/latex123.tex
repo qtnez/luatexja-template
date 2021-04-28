@@ -1,0 +1,49 @@
+% Title page for latex123.
+% Edward G.J. Lee (edt1023@gmail.com) 2021.04.28.
+
+\documentclass[11pt]{article}
+
+\usepackage[myfont]{ltj-zhfonts}
+\usepackage[nomath]{libertinus} % libertinus font
+\usepackage{luamplib}
+\usepackage{adjustbox}
+\usepackage{color}
+\definecolor{steelblue}{rgb}{.275,.51,.71}
+\definecolor{lpink}{rgb}{.991,.711,.754}
+
+\newcommand{\zhtoday}{%
+ \kansuji\year 年
+ \kansuji\month 月
+ \kansuji\day 日}
+
+\begin{document}
+
+\begin{titlepage}
+\vspace*{5ex}
+  \begin{flushright}
+    {\textcolor{steelblue}{\fontsize{36}{20pt}\selectfont \iyan 大家來學 \textbf{\LaTeX}}}
+  \end{flushright}
+  \textcolor{lpink}{\rule{\textwidth}{.256ex}}
+  \begin{flushleft}
+    Version 1.0\\
+    \zhtoday
+  \end{flushleft}
+  \vspace{2ex}
+  \center
+  \begin{minipage}{.6\textwidth}
+   \begin{adjustbox}{center, width=.7\columnwidth,height=1.5\columnwidth}
+    \begin{mplibcode}
+      input cover2.mp;
+    \end{mplibcode}
+   \end{adjustbox}
+  \end{minipage}
+  \vspace{2ex}
+  \begin{flushright}
+    By Edward G.J.\ Lee 李果正\\
+    Email : {\tt edt1023@gmail.ok.org}\\
+    本教學文件之製作，部份接受下列計劃補助：\\
+    行政院研考會委辦 「政府機關資料文件交換之電子檔案格式應用研究」
+  \end{flushright}
+\end{titlepage}
+
+\end{document}
