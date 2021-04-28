@@ -1,0 +1,48 @@
+\documentclass[11pt]{article}
+
+\usepackage[myfont]{ltj-zhfonts}
+\usepackage[nomath]{libertinus} % libertinus font
+\usepackage{luamplib}
+\usepackage{color}
+\definecolor{steelblue}{rgb}{.275,.51,.71}
+\definecolor{mygray}{gray}{0.92}
+\definecolor{darkblue}{rgb}{0,0,.5}
+\definecolor{brown}{rgb}{.64,.17,.17}
+\definecolor{brown4}{rgb}{.54,.14,.14}
+\definecolor{burlywood4}{rgb}{.54,.45,.33}
+\definecolor{hgray}{gray}{.5}
+\definecolor{lgray}{gray}{.8}
+
+\newcommand{\zhtoday}{%
+ \kansuji\year 年
+ \kansuji\month 月
+ \kansuji\day 日}
+
+\begin{document}
+
+\begin{titlepage}
+\vspace*{5ex}
+  \begin{flushright}
+    {\textcolor{steelblue}{\fontsize{36}{20pt}\selectfont \iyan 我\kern+5pt{}的 Ｃ\kern-11pt{}Ｊ\kern-10pt{}Ｋ}}
+  \end{flushright}
+  \textcolor{lgray}{\rule{\textwidth}{.1cm}}
+%\htmlrule
+  \begin{flushleft}
+    Version 1.1\\
+    \zhtoday
+  \end{flushleft}
+  \vspace{10ex}
+\hspace{2em}
+ \begin{mplibcode}
+   input cover.mp;
+ \end{mplibcode}
+  \vspace{30ex}
+  \begin{flushright}
+    By Edward G.J. Lee 李果正\\
+    Email : {\tt edt1023@gmail.ok.org}\\
+    本教學文件之製作，部份接受下列計劃補助：\\
+    行政院研考會委辦 「政府機關資料文件交換之電子檔案格式應用研究」
+  \end{flushright}
+\end{titlepage}
+
+\end{document}
