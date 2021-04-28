@@ -1,0 +1,296 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% 2021.04.29
+% zh_TW(LuaLaTeX) version by Edward G.J. Lee (edt1023@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass{beamer}
+
+\mode<presentation> {
+
+% The Beamer class comes with a number of default slide themes
+% which change the colors and layouts of slides. Below this is a list
+% of all the themes, uncomment each in turn to see what they look like.
+
+%\usetheme{default}
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Bergen}
+%\usetheme{Berkeley}
+%\usetheme{Berlin}
+%\usetheme{Boadilla}
+%\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+\usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+
+% As well as themes, the Beamer class has a number of color themes
+% for any slide theme. Uncomment each of these in turn to see how it
+% changes the colors of your current slide theme.
+
+%\usecolortheme{albatross}
+%\usecolortheme{beaver}
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+%\usecolortheme{dolphin}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+%\usecolortheme{orchid}
+%\usecolortheme{rose}
+%\usecolortheme{seagull}
+%\usecolortheme{seahorse}
+%\usecolortheme{whale}
+%\usecolortheme{wolverine}
+
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+
+%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+
+%\usepackage[myfont]{ltj-zhfonts} % 無法直接這麼用，要另外設字型。
+\usepackage{luatexja-preset}
+\setmainjfont[BoldFont=Noto Sans CJK TC Medium,
+              YokoFeatures = {JFM = zh_TW/quanjiao},
+              BoldItalicFont=I.Ngaan,
+              ItalicFont=TW-MOE-Std-Kai]{I.MingCP}
+\setsansjfont[BoldFont=Noto Sans CJK TC Medium,
+              YokoFeatures = {JFM = zh_TW/quanjiao},
+              BoldItalicFont=I.Ngaan,
+              ItalicFont=TW-MOE-Std-Kai]{Taipei Sans TC Beta Light}
+\setjfontfamily\iyan{I.Ngaan}
+\usepackage{libertinus}
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+
+\newcommand{\zhtoday}{%
+ \kansuji\year 年
+ \kansuji\month 月
+ \kansuji\day 日}
+
+\renewcommand{\figurename}{圖}
+\renewcommand{\tablename}{表}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title[這裡是短標題]{\iyan 這裡是完整長標題} % The short title appears at the bottom of every slide, the full title is only on the title page
+
+\author{周伯通} % Your name
+\institute[Uranus] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{
+天王星大學\\ % Your institution for the title page
+\medskip
+\texttt{john@smith.com} % Your email address
+}
+\date{\zhtoday} % Date, can be changed to a custom date
+
+\begin{document}
+
+\begin{frame}
+\titlepage % Print the title page as the first slide
+\end{frame}
+
+\begin{frame}
+\frametitle{\iyan 概觀} % Table of contents slide, comment this block out to remove it
+\tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+%------------------------------------------------
+\section{第一節} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
+%------------------------------------------------
+
+\subsection{小節實例} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+
+\begin{frame}
+\frametitle{\iyan 段落文章}
+故動則有成，猶鬼神幽贊，而命世奇傑，時時間出焉。五藏六府之精氣，
+皆上注於目而為之精。精之案為眼，骨之精為瞳子；筋之精為黑眼，血之
+精為力絡。其案氣之精為白眼，肌肉之精為約束。裹擷筋骨血氣之精，而
+與脈並為系。\\~\\
+
+不謀而遺跡自同，勿約而幽明斯契。稽其言有微，驗之事不忒。誠可謂至道之宗，奉生之
+始矣。假若天機迅發，妙識玄通。成謀雖屬乎生知，標格亦資於治訓。未嘗有行不由送，
+出不由產者亦。然刻意研精，探微索隱；或識契真要，則目牛無全。
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{\iyan 符號項目}
+\begin{itemize}
+\item 故動則有成，猶鬼神幽贊，而命世奇傑，時時間出焉。
+\item 然刻意研精，探微索隱；或識契真要，則目牛無全。
+\item 不謀而遺跡自同，勿約而幽明斯契。稽其言有微，驗之事不忒。
+\item 誠可謂至道之宗，奉生之始矣。假若天機迅發，妙識玄通。
+\item 五藏六府之精氣，皆上注於目而為之精。精之案為眼，骨之精為瞳子；筋之精為黑眼，血之精為力絡。
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{\iyan 光棒段落}
+\begin{block}{第一段落}
+天之道，損有餘而補不足，是故虛勝實，不足勝有餘。其意博，其理奧，
+其趣深。天地之像分，陰陽之侯烈，變化之由表，死生之兆章。
+\end{block}
+
+\begin{block}{第二段落}
+故動則有成，猶鬼神幽贊，而命世奇傑，時時間出焉。五藏六府之精氣，皆上注於目而為之精。精之案為眼，骨之精為瞳子；筋之精為黑眼，血之精為力絡。其案氣之精為白眼，肌肉之精為約束。裹擷筋骨血氣之精，而與脈並為系。
+\end{block}
+
+\begin{block}{第三段落}
+故動則有成，猶鬼神幽贊，而命世奇傑，時時間出焉。
+五藏六府之精氣，皆上注於目而為之精。精之案為眼，
+骨之精為瞳子；筋之精為黑眼，血之精為力絡。其案氣
+之精為白眼，肌肉之精為約束。裹擷筋骨血氣之精，而
+與脈並為系。
+\end{block}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{\iyan 多欄位}
+\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+
+\column{.45\textwidth} % Left column and width
+\textbf{標題}
+\begin{enumerate}
+\item 敘述
+\item 說明
+\item 實例
+\end{enumerate}
+
+\column{.5\textwidth} % Right column and width
+故動則有成，猶鬼神幽贊，而命世奇傑，時時間出焉。五藏六府之精氣，
+皆上注於目而為之精。精之案為眼，骨之精為瞳子；筋之精為黑眼，
+血之精為力絡。其案氣之精為白眼，肌肉之精為約束。裹擷筋骨血氣之
+精，而與脈並為系。
+
+\end{columns}
+\end{frame}
+
+%------------------------------------------------
+\section{第二節}
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{\iyan 表格}
+\begin{table}
+\begin{tabular}{l l l}
+\toprule
+\textbf{處理} & \textbf{反應一} & \textbf{反應二}\\
+\midrule
+處理一 & 0.0003262 & 0.562 \\
+處理二 & 0.0015681 & 0.910 \\
+處理三 & 0.0009271 & 0.296 \\
+\bottomrule
+\end{tabular}
+\caption{表格標題}
+\end{table}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{\iyan 定理}
+\begin{theorem}[Mass--energy equivalence]
+$E = mc^2$
+\end{theorem}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}[fragile] % Need to use the fragile option when verbatim is used in the slide
+\frametitle{\iyan 原文照列}
+\begin{example}[Theorem Slide Code]
+\begin{verbatim}
+\begin{frame}
+\frametitle{定理}
+\begin{theorem}[Mass--energy equivalence]
+$E = mc^2$
+\end{theorem}
+\end{frame}\end{verbatim}
+\end{example}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{\iyan 圖}
+%Uncomment the code on this slide to include your own image from the same directory as the template .TeX file.
+\begin{figure}
+ \includegraphics[width=0.6\linewidth, scale=.8]{placeholder.jpg}
+ \caption{圖標題}
+\end{figure}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}[fragile] % Need to use the fragile option when verbatim is used in the slide
+\frametitle{\iyan 引用}
+一個引用的實例，使用 \verb|\cite| 指令來引用：\\~
+
+這個敘述需要引用。\cite{p1}.
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{\iyan 參考文獻}
+\footnotesize{
+\begin{thebibliography}{99} % Beamer does not support BibTeX so references must be inserted manually as below
+\bibitem[Smith, 2012]{p1} 周伯通（二○一二）
+\newblock 雙手互搏出版社
+\newblock \emph{天王星戰報} 12(3), 45 -- 678.
+\end{thebibliography}
+}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\Huge{\centerline{\iyan 終}}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
