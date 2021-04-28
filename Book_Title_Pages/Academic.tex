@@ -1,0 +1,127 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Academic Title Page
+% LaTeX Template
+% Version 2.0 (17/7/17)
+%
+% This template was downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% WikiBooks (LaTeX - Title Creation) with modifications by:
+% Vel (vel@latextemplates.com)
+%
+% 2021.04.28
+% zh_TW(LuaLaTeX) version by Edward G.J. Lee (edt1023@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Instructions for using this template:
+% This title page is capable of being compiled as is. This is not useful for
+% including it in another document. To do this, you have two options:
+%
+% 1) Copy/paste everything between \begin{document} and \end{document}
+% starting at \begin{titlepage} and paste this into another LaTeX file where you
+% want your title page.
+% OR
+% 2) Remove everything outside the \begin{titlepage} and \end{titlepage}, rename
+% this file and move it to the same directory as the LaTeX file you wish to add it to.
+% Then add \input{./<new filename>.tex} to your LaTeX file where you want your
+% title page.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%  PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt]{article}
+
+\usepackage[myfont]{ltj-zhfonts}
+
+\usepackage[nomath]{libertinus} % libertinus font
+
+\newcommand{\zhtoday}{%
+ \kansuji\year 年
+ \kansuji\month 月
+ \kansuji\day 日}
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%  TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\begin{titlepage} % Suppresses displaying the page number on the title page and the subsequent page counts as page 1
+  \newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for horizontal lines, change thickness here
+
+  \center % 通通置中
+
+  %------------------------------------------------
+  %  標題
+  %------------------------------------------------
+
+  \textsf{\LARGE 單位名稱}\\[1.5cm] % Main heading such as the name of your university/college
+
+  \textsf{\Large 主標題}\\[0.5cm] % Major heading such as course name
+
+  \textsf{\large 次標題}\\[0.5cm] % Minor heading such as course title
+
+  %------------------------------------------------
+  %  書名
+  %------------------------------------------------
+
+  \HRule\\[0.4cm]
+
+  {\huge\iyan 記承天寺夜遊}\\[0.4cm] % Title of your document
+
+  \HRule\\[1.5cm]
+
+  %------------------------------------------------
+  %  作者[群]
+  %------------------------------------------------
+
+  \begin{minipage}{0.4\textwidth}
+    \begin{flushleft}
+      \large
+      \textit{作者}\\
+      \textsf{宋 蘇軾} % Your name
+    \end{flushleft}
+  \end{minipage}
+  ~
+  \begin{minipage}{0.4\textwidth}
+    \begin{flushright}
+      \large
+      \textit{審訂者}\\
+      \textsf{宋 蘇洵} % Supervisor's name
+    \end{flushright}
+  \end{minipage}
+
+  % If you don't want a supervisor, uncomment the two lines below and comment the code above
+  %{\large\textit{Author}}\\
+  %John \textsc{Smith} % Your name
+
+  %------------------------------------------------
+  %  日期
+  %------------------------------------------------
+
+  \vfill\vfill\vfill % Position the date 3/4 down the remaining page
+
+  {\large\zhtoday} % Date, change the \today to a set date if you want to be precise
+
+  %------------------------------------------------
+  %  Logo
+  %------------------------------------------------
+
+  %\vfill\vfill
+  %\includegraphics[width=0.2\textwidth]{placeholder.jpg}\\[1cm] % Include a department/university logo - this will require the graphicx package
+
+  %----------------------------------------------------------------------------------------
+
+  \vfill % Push the date up 1/4 of the remaining page
+
+\end{titlepage}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
