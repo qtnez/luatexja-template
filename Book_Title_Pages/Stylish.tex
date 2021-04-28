@@ -1,0 +1,94 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Stylish Title Page
+% LaTeX Template
+% Version 2.0 (22/7/17)
+%
+% This template was downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Peter Wilson (herries.press@earthlink.net) with modifications by:
+% Vel (vel@latextemplates.com)
+%
+% 2021.04.28
+% zh_TW(LuaLaTeX) version by Edward G.J. Lee (edt1023@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% This template can be used in one of two ways:
+%
+% 1) Content can be added at the end of this file just before the \end{document}
+% to use this title page as the starting point for your document.
+%
+% 2) Alternatively, if you already have a document which you wish to add this
+% title page to, copy everything between the \begin{document} and
+% \end{document} and paste it where you would like the title page in your
+% document. You will then need to insert the packages and document
+% configurations into your document carefully making sure you are not loading
+% the same package twice and that there are no clashes.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%  PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[a4paper, 11pt, oneside]{book} % A4 paper size, default 11pt font size and oneside for equal margins
+
+\usepackage[svgnames]{xcolor} % Required for colour specification
+
+\usepackage{graphicx} % Required for box manipulation
+
+\newcommand*{\plogo}{\fbox{$\mathcal{PL}$}} % Generic dummy publisher logo
+
+\usepackage[myfont]{ltj-zhfonts}
+\usepackage[nomath]{libertinus} % Use the libertinus font
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%  TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\begin{titlepage} % Suppresses headers and footers on the title page
+
+  \centering % Centre all text
+
+  %------------------------------------------------
+  %  Title and subtitle
+  %------------------------------------------------
+
+  \setlength{\unitlength}{0.6\textwidth} % Set the width of the curly brackets above and below the titles
+
+  {\color{LightGoldenrod}\resizebox*{\unitlength}{\baselineskip}{\rotatebox{90}{$\}$}}}\\[\baselineskip] % Top curly bracket
+
+  \textcolor{Sienna}{\textit{\Huge 一本非常厚的Lua\LaTeX{}範本書}}\\[\baselineskip] % Title
+
+  {\color{RosyBrown}\Large 亮瞎眼的收集}\\ % Subtitle or further description
+
+  {\color{LightGoldenrod}\resizebox*{\unitlength}{\baselineskip}{\rotatebox{-90}{$\}$}}} % Bottom curly bracket
+
+  \vfill % Whitespace between the title and the author name
+
+  %------------------------------------------------
+  %  Author
+  %------------------------------------------------
+
+  {\Large\textbf{周伯通}}\\ % Author name
+
+  \vfill % Whitespace between the author name and the publisher logo
+
+  %------------------------------------------------
+  %  Publisher
+  %------------------------------------------------
+
+  \plogo\\[0.5\baselineskip] % Publisher logo
+
+  左右手互擊出版社 % Publisher name
+
+\end{titlepage}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
