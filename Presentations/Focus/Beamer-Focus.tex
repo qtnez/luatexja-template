@@ -1,0 +1,269 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Focus Beamer Presentation
+% LaTeX Template
+% Version 1.0 (8/8/18)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Pasquale Africa (https://github.com/elauksap/focus-beamertheme) with modifications by
+% Vel (vel@LaTeXTemplates.com)
+%
+% 2021.04.30
+% zh_TW(LuaLaTeX) version by Edward G.J. Lee <edt1023@gmail.com>
+%
+% Template license:
+% GNU GPL v3.0 License
+%
+% Important note:
+% The bibliography/references need to be compiled with bibtex.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%  PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[hyperref={bookmarks=false}]{beamer}
+
+\usetheme{focus} % Use the Focus theme supplied with the template
+% Add option [numbering=none] to disable the footer progress bar
+% Add option [numbering=fullbar] to show the footer progress bar as always full with a slide count
+
+% Uncomment to enable the ice-blue theme
+\definecolor{main}{RGB}{92, 138, 168}
+\definecolor{background}{RGB}{240, 247, 255}
+
+% for luatex-ja presentation and zh_TW fonts setting.
+\usepackage[match]{luatexja-fontspec}
+\setmainjfont[BoldFont=Noto Sans CJK TC Medium,
+              YokoFeatures = {JFM = zh_TW/quanjiao},
+              BoldItalicFont=I.Ngaan,
+              ItalicFont=TW-MOE-Std-Kai]{I.MingCP}
+\setsansjfont[BoldFont=Noto Sans CJK TC Medium,
+              YokoFeatures = {JFM = zh_TW/quanjiao},
+              BoldItalicFont=I.Ngaan,
+              ItalicFont=TW-MOE-Std-Kai]{Taipei Sans TC Beta Light}
+\setmonojfont[BoldFont=Noto Sans CJK TC Medium,
+              YokoFeatures = {JFM = zh_TW/quanjiao},
+              BoldItalicFont=I.Ngaan,
+              ItalicFont=TW-MOE-Std-Kai]{cwTeXFangSong}
+\setjfontfamily\iyan{I.Ngaan}
+%\usepackage{libertinus} % libertinus font.
+
+\newcommand{\zhtoday}{%
+ \kansuji\year 年
+ \kansuji\month 月
+ \kansuji\day 日}
+
+\renewcommand{\figurename}{圖}
+\renewcommand{\tablename}{表}
+
+%------------------------------------------------
+
+\usepackage{booktabs} % Required for better table rules
+
+%----------------------------------------------------------------------------------------
+%   TITLE SLIDE
+%----------------------------------------------------------------------------------------
+
+\title{Focus: \\ 一個簡約主義的 Beamer 佈景主題}
+
+\subtitle{次標題}
+
+\author{周伯通 \\ 小龍女}
+
+\titlegraphic{\includegraphics[scale=1.25]{Images/focuslogo.pdf}} % Optional title page image, comment this line to remove it
+
+\institute{單位名稱 \\ 單位地址}
+
+\date{\zhtoday}
+
+%------------------------------------------------
+
+\begin{document}
+
+%------------------------------------------------
+
+\begin{frame}
+  \maketitle % Automatically created using the information in the commands above
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+%   SECTION 1
+%----------------------------------------------------------------------------------------
+
+\section{第一節} % Section title slide, unnumbered
+
+%------------------------------------------------
+
+\begin{frame}{\iyan 簡單的簡報}
+  這是一個簡單的簡報。
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}[plain]{Plain Slide}
+%  This is a slide with the plain style and it is numbered.
+  這是易使用 plain style 的簡報（附有數字）。
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}[t]
+%  This slide has an empty title and is aligned to top.
+  這個頁面沒有標題，而且沿上排列。
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}[noframenumbering]{\iyan 沒有附上數字的頁面}
+%  This slide is not numbered and is citing reference \cite{knuth74}.
+  這是沒附上數字的頁面，並且有引用參文獻\cite{knuth74}。
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}{\iyan 排版及數式}
+%  The packages \texttt{inputenc} and \texttt{FiraSans}\footnote{\url{https://fonts.google.com/specimen/Fira+Sans}}\textsuperscript{,}\footnote{\url{http://mozilla.github.io/Fira/}} are used to properly set the main fonts.
+ \texttt{inputenc}及\texttt{FiraSans}\footnote{\url{https://fonts.google.com/specimen/Fira+Sans}}\textsuperscript{,}\footnote{\url{http://mozilla.github.io/Fira/}} 套件，用於設定適合的字型（和 \texttt{luatex-ja} 可能會衝突，小心使用）。
+  \vfill
+%  This theme provides styling commands to typeset \emph{emphasized}, \alert{alerted}, \textbf{bold}, \textcolor{example}{example text}, \dots
+  這個佈景主題提供指令來設定來\emph{加強}、\alert{警訊}、\textbf{粗體}、\textcolor{example}{範例文字}……
+  \vfill
+  \texttt{FiraSans} 亦提供數理式子符號：
+  \begin{equation*}
+    e^{i\pi} + 1 = 0.
+  \end{equation*}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+%   SECTION 2
+%----------------------------------------------------------------------------------------
+
+\section{第二節}
+
+%------------------------------------------------
+
+\begin{frame}{\iyan 區塊}
+%  These blocks are part of 1 slide, to be displayed consecutively.
+  這些區塊都是屬於同一個 slide 頁面，是為了可以連續顯示。
+  \begin{block}{一般區塊}
+    這裡是一般區塊中的文字。
+  \end{block}
+  \pause % Automatically creates a new "page" split between the above and above + below
+  \begin{alertblock}{警訊區塊}
+    警訊 \alert{警訊文字}。
+  \end{alertblock}
+  \pause % Automatically creates a new "page" split between the above and above + below
+  \begin{exampleblock}{實例文字區塊}
+    實例 \textcolor{example}{實例文字內容}。
+  \end{exampleblock}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}{\iyan 多欄位}
+  \begin{columns}
+    \column{0.5\textwidth}
+%      This text appears in the left column and wraps neatly with a margin between columns.
+      這些文字會出現在左欄位，而且會在欄位邊界自動折行。
+
+    \column{0.5\textwidth}
+      \includegraphics[width=\linewidth]{Images/placeholder.jpg}
+  \end{columns}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}{\iyan 列舉}
+  \begin{columns}[T, onlytextwidth] % T for top align, onlytextwidth to suppress the margin between columns
+    \column{0.33\textwidth}
+      項目列舉：
+      \begin{itemize}
+        \item 項目一
+        \begin{itemize}
+          \item 次項目 1.1
+          \item 次項目 1.2
+        \end{itemize}
+        \item 項目二
+        \item 項目三
+      \end{itemize}
+
+    \column{0.33\textwidth}
+      數字列舉：
+      \begin{enumerate}
+        \item 數字一
+        \item 數字二
+        \begin{enumerate}
+          \item 數字次項目
+          \item 數字次項目
+        \end{enumerate}
+        \item 數字三
+      \end{enumerate}
+
+    \column{0.33\textwidth}
+      敘述列舉：
+      \begin{description}
+        \item[第一項] 是。
+        \item[第二項] 否。
+      \end{description}
+  \end{columns}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}{\iyan 表格}
+  \begin{table}
+    \centering % Centre the table on the slide
+    \begin{tabular}{l c}
+      \toprule
+      專業 & 平均薪資 \\
+      \toprule
+      \textbf{工程} & \textbf{\$66,521} \\
+      電腦科學 & \$60,005\\
+      數學 & \$61,867\\
+      商業 & \$56,720\\
+      人文及社會科學 & \$56,669\\
+      農業及自然景觀 & \$53,565\\
+      通訊 & \$51,448\\
+      \midrule
+      \textbf{所有專業平均} & \textbf{\$58,114}\\
+      \bottomrule
+    \end{tabular}
+  \caption{這裡是你的表格標題}
+  \end{table}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}[focus]
+  {\iyan 感謝使用 \textbf{Focus}！}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+%   CLOSING/SUPPLEMENTARY SLIDES
+%----------------------------------------------------------------------------------------
+
+\appendix
+
+\begin{frame}{\iyan 參考文獻}
+  \nocite{*} % Display all references regardless of if they were cited
+  \bibliography{example.bib}
+  \bibliographystyle{plain}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}{\iyan 備用頁面}
+%  This is a backup slide, useful to include additional materials to answer questions from the audience.
+  這是備用的頁面，應付聽眾額外的資料及答案。
+  \vfill
+% The package \texttt{appendixnumberbeamer} is used to refrain from numbering appendix slides.
+   \texttt{appendixnumberbeamer} 可用於修正 Beamer 的附錄數字。
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
