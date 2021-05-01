@@ -1,0 +1,65 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Chemical Equations
+% LaTeX Template
+% Version 1.0 (14/10/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Martin Hensel (from the mhchem package documentation)
+%
+% 2021.05.01
+% zh_TW(LuaLaTeX) version by Edward G.J. Lee <edt1023@gmail.com>
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Note: to use these chemistry equations in your own document you will
+% need to copy the \usepackage[version=3]{mhchem} line and paste it
+% before \begin{document} in your document. After this you can use the
+% chemistry equation notation as exemplified in this document anywhere
+% in your document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{article}
+
+\usepackage[version=3]{mhchem} % Package for chemical equation typesetting
+\usepackage[match]{luatexja-fontspec}
+\setmainjfont[BoldFont=Noto Sans CJK TC Medium,
+              YokoFeatures = {JFM = zh_TW/quanjiao},
+              BoldItalicFont=I.Ngaan,
+              ItalicFont=TW-MOE-Std-Kai]{I.MingCP}
+\setsansjfont[BoldFont=Noto Sans CJK TC Medium,
+              YokoFeatures = {JFM = zh_TW/quanjiao},
+              BoldItalicFont=I.Ngaan,
+              ItalicFont=TW-MOE-Std-Kai]{Taipei Sans TC Beta Light}
+\setmonojfont[BoldFont=Noto Sans CJK TC Medium,
+              YokoFeatures = {JFM = zh_TW/quanjiao},
+              BoldItalicFont=I.Ngaan,
+              ItalicFont=TW-MOE-Std-Kai]{cwTeXFangSong}
+
+\usepackage{libertinus}
+
+\begin{document}
+
+\paragraph{基礎} \ce{H2O}, \ce{Sb2O3}, \ce{H+}, \ce{CrO4^2-}, \ce{AgCl2-}, \ce{[AgCl2]-}, \ce{Y^{99}+}, \ce{H2_{(aq)}}, \ce{NO3-}, \ce{(NH4)2S}
+
+\paragraph{數量} \ce{2H2O}, \ce{1/2H2O}
+
+\paragraph{同位素} \ce{^{227}_{90}Th+}
+
+\paragraph{特殊符號} \ce{KCr(SO4)2*12H2O}, \cf{[Cd\{SC(NH2)2\}2].[Cr(SCN)4(NH3)2]2}, $\ce{RNO2^{-.}}$, \ce{RNO2^{-.}}, \ce{$\mu\hyphen$Cl}
+
+\paragraph{鍵} \ce{C6H5-CHO}, \ce{A\sbond B\dbond C\tbond D}, \ce{A\bond{~}B\bond{~-}C}, \ce{A\bond{~=}B\bond{~--}C\bond{-~-}D}, \ce{A\bond{...}B\bond{....}C}, \ce{A\bond{->}B\bond{<-}C}
+
+\paragraph{使用數式} \ce{Fe(CN)_{$\frac{6}{2}$}}, \ce{$x\,$ Na(NH4)HPO4 ->[\Delta] (NaPO3)_{$x$} + $x\,$ NH3 ^ + $x\,$ H2O}
+
+\paragraph{反應箭頭} \ce{CO2 + C -> 2CO}, \ce{CO2 + C <- 2CO}, \ce{CO2 + C <=> 2CO}, \ce{H+ + OH- <=>> H2O}, \ce{$A$ <-> $A’$}, \ce{CO2 + C ->[\alpha] 2CO}, \ce{CO2 + C ->[\alpha][\beta] 2CO}, \ce{CO2 + C ->T[above][below] 2CO}, \ce{$A$ ->C[+H2O] $B$}
+
+\paragraph{沉澱及氣體析出} \ce{SO4^2- + Ba^2+ -> BaSO4 v}, \ce{Zn + H2SO4 -> ZnSO4 + H2 ^}
+
+\paragraph{額外例子} \ce{Zn^2+ <=>[\ce{+ 2OH-}][\ce{+ 2H+}] $\underset{\text{amphoteres Hydroxid}}{\ce{Zn(OH)2 v}}$ <=>C[+2OH-][{+ 2H+}] $\underset{\text{Hydroxozikat}}{\cf{[Zn(OH)4]^2-}}$}, $K = \frac{[\ce{Hg^2+}][\ce{Hg}]}{[\ce{Hg2^2+}]}$, \ce{Hg^2+ ->[\ce{I-}] $\underset{\mathrm{red}}{\ce{HgI2}}$ ->C[I-] $\underset{\mathrm{red}}{\ce{[Hg^{II}I4]^2-}}$}
+
+\end{document}
