@@ -1,0 +1,169 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Frequently Asked Questions
+% LaTeX Template
+% Version 1.0 (22/7/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Adam Glesser (adamglesser@gmail.com)
+%
+% zh_TW(LuaLaTeX + luatex-ja) version by Edward G.J. Lee <edt1023@gmail.com>
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[,a4paper,11pt]{article}
+
+\usepackage[myfont]{ltj-zhfonts}
+\renewcommand{\baselinestretch}{1.20}
+\setlength{\marginparwidth }{2cm}
+
+\usepackage[margin=1in]{geometry} % Required to make the margins smaller to fit more content on each page
+\usepackage[linkcolor=blue]{hyperref} % Required to create hyperlinks to questions from elsewhere in the document
+\hypersetup{pdfborder={0 0 0}, colorlinks=true, urlcolor=blue} % Specify a color for hyperlinks
+\usepackage{todonotes} % Required for the boxes that questions appear in
+\usepackage{tocloft} % Required to give customize the table of contents to display questions
+%\usepackage{microtype} % Slightly tweak font spacing for aesthetics 中文文件不需要
+%\usepackage{palatino} % Use the Palatino font
+\usepackage{libertinus} % Use the libertinus font
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+% Create and define the list of questions
+\newlistof{questions}{faq}{\large 經常被提問的問題列表} % This creates a new table of contents-like environment that will output a file with extension .faq
+\setlength\cftbeforefaqtitleskip{4em} % Adjusts the vertical space between the title and subtitle
+\setlength\cftafterfaqtitleskip{1em} % Adjusts the vertical space between the subtitle and the first question
+\setlength\cftparskip{.3em} % Adjusts the vertical space between questions in the list of questions
+
+% Create the command used for questions
+\newcommand{\question}[1] % This is what you will use to create a new question
+{
+\refstepcounter{questions} % Increases the questions counter, this can be referenced anywhere with \thequestions
+\par\noindent % Creates a new unindented paragraph
+\phantomsection % Needed for hyperref compatibility with the \addcontensline command
+\addcontentsline{faq}{questions}{#1} % Adds the question to the list of questions
+\todo[inline,color=green!20]{\textbf{#1}} % Uses the todonotes package to create a fancy box to put the question
+\vspace{1em} % White space after the question before the start of the answer
+}
+
+% Uncomment the line below to get rid of the trailing dots in the table of contents
+%\renewcommand{\cftdot}{}
+
+% Uncomment the two lines below to get rid of the numbers in the table of contents
+%\let\Contentsline\contentsline
+%\renewcommand\contentsline[3]{\Contentsline{#1}{#2}{}}
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE AND LIST OF QUESTIONS
+%----------------------------------------------------------------------------------------
+
+\begin{center}
+\Huge{\bf \emph{FAQ 的範本}} % Main title
+\end{center}
+
+\listofquestions % This prints the subtitle and a list of all of your questions
+
+\newpage % Comment this if you would like your questions and answers to start immediately after table of questions
+
+%----------------------------------------------------------------------------------------
+%	QUESTIONS AND ANSWERS
+%----------------------------------------------------------------------------------------
+
+\question{我如何增加新的問答條？}\label{new-question}
+
+程式碼如下：
+
+\begin{verbatim}
+\question{新的提問內容。}\label{question-label}
+
+新提問的答案。
+\end{verbatim}
+
+%------------------------------------------------
+
+\question{為何新提問後有如下的標籤？\hyperref[new-question]{之前的提問}}\label{labels}
+
+這不是必要的，但這樣可以連結至另一個不同的問題條，若需要要這樣的連結，就要寫成：
+
+\begin{verbatim}
+\hyperref[question-label]{之前的提問}
+\end{verbatim}
+
+\texttt{[question-label]}是標籤名（內部運作，不會顯示出來），\texttt{\{之前的提問\}}則是顯示出來的文字。\texttt{\\hyperref[question-lavel]}則是引用的方法。
+
+%------------------------------------------------
+
+\question{我如何修改主標題及次標題？}\label{change-title}
+
+修改主標題，只要找到``TITLE AND LIST OF QUESTIONS''的區塊，把「FAQ 的範本」修改成你想的內容即可。修改次標題，找到如下的指令：
+
+\begin{verbatim}
+\newlistof{questions}{faq}{\large 經常被提問的問題列表}
+\end{verbatim}
+
+把的新內容取代過去就行了。
+
+%------------------------------------------------
+
+\question{如何修改問題列表的行距？}\label{change-spacing}
+
+很簡單：
+
+\begin{verbatim}
+\setlength\cftparskip{.3em}
+\end{verbatim}
+
+修改\texttt{.3em}成你想要的行距。
+
+%------------------------------------------------
+
+\question{如果我想在問題列表中隱藏頁數或/且把尾隨問題之後的連續小點去除，要如何處理？}\label{page-numbering}
+
+去除連續小點，請找到以下內容，把註解拿掉：
+
+\begin{verbatim}
+%\renewcommand{\cftdot}{}
+\end{verbatim}
+想把頁數也去除，請找到以下的內容，並把註解符號拿掉：
+\begin{verbatim}
+%\let\Contentsline\contentsline
+%\renewcommand\contentsline[3]{\Contentsline{#1}{#2}{}}
+\end{verbatim}
+
+%------------------------------------------------
+
+\question{提問的問題是否可以標號？}\label{number-questions}
+
+可以，你可以用以下的指令得到目前問題的編號：
+
+\begin{verbatim}
+\thequestions
+\end{verbatim}
+
+例如，這個問題的標號是：\thequestions。你甚至可以把這個標號引入問題中：
+
+\begin{verbatim}
+問題 \thequestions：
+\end{verbatim}
+
+只要置放在你的問題內容之前即可（例如底下的「\textbf{問題  7：}」）。在文件前導區（preamble）\texttt{\textbackslash questions} 中，在 \texttt{\#1}之前置放以上的內容，文件將會自動產生問題編號。
+
+%------------------------------------------------
+
+\question{問題 \thequestions：我可以更改問題光棒的顏色嗎？}\label{question-color}
+
+找到以下一行就可以更改顏色了（除了主顏色可以更改外，後面的數字愈大顏色愈深）：
+
+\begin{verbatim}
+\todo[inline, color=green!20]{\textbf{#1}}
+\end{verbatim}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
