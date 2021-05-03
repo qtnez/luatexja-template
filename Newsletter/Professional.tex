@@ -1,0 +1,273 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Professional Newsletter Template
+% LaTeX Template
+% Version 1.0 (09/03/14)
+%
+% Created by:
+% Bob Kerstetter (https://www.tug.org/texshowcase/) and extensively modified by:
+% Vel (vel@latextemplates.com)
+%
+% 2021.05.03
+% zh_TW(LuaLaTeX) version by Edward G.J. Lee <edt1023#gmail.com>
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt]{article} % The default font size is 10pt; 11pt and 12pt are alternatives
+
+\input{structure.tex} % Include the document which specifies all packages and structural customizations for this template
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	HEADER IMAGE
+%----------------------------------------------------------------------------------------
+
+\begin{figure}[H]
+\centering\includegraphics[width=0.3\linewidth]{logo.png}
+\end{figure}
+
+%----------------------------------------------------------------------------------------
+%	第一頁左邊框
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}[t]{.30\linewidth} % Mini page taking up 30% of the actual page
+\begin{mdframed}[style=sidebar,frametitle={}] % Sidebar box
+
+%-----------------------------------------------------------
+
+\hypertarget{contents}{\textbf{{\large 重點議題……}}} % \hypertarget provides a label to reference using \hyperlink{label}{link text}
+\begin{itemize}
+\item \hyperlink{firstnews}{第一則新聞標題} % These link to their appropriate sections in the newsletter
+\item \hyperlink{secondnews}{第二則新聞標題}
+\item \hyperlink{thirdnews}{第三則新聞標題}
+\item \hyperlink{descriptivebox}{短語方框}
+\item \hyperlink{quotation}{自定的引言}
+\end{itemize}
+
+\centerline {\rule{.75\linewidth}{.25pt}} % Horizontal line
+
+%-----------------------------------------------------------
+
+\textbf{左方框第一標題}
+
+又東三百八十里，曰猨翼之山，其中多怪獸，水多怪魚，多白玉，多腹虫，多怪
+蛇，多怪木，不可以上。
+
+\begin{enumerate}
+\item 又東三百里，曰堂庭之山，多棪木，多白猿，多水玉，多黃金。
+\item 又東三百八十里，曰猨翼之山，其中多怪獸，水多怪魚，多白玉，多腹虫，多怪蛇，多怪木，不可以上。
+\item 又東三百七十里，曰瞿父之山，無草木，多金玉。
+\item 又東四百里，曰句餘之山，無草木，多金玉。
+\end{enumerate}
+
+%-----------------------------------------------------------
+
+\textbf{左方框第二標題}
+
+又東三百七十里，曰杻陽之山，其陽多赤金，其陰多白金。有獸焉，其狀如馬而
+白首，其文如虎而赤尾，其音如謠，其名曰鹿蜀，佩之宜子孫。怪水出焉，而東流
+注於憲翼之水。其中多玄龜，其狀如龜而鳥首虺尾，其名曰\href{http://www.example.com}{旋龜}，其音如判木，佩
+之不聾，可以為底。
+
+\textbf{左方框第三標題}
+
+又東三百里，曰青丘之山，其陽多玉，其陰多青䨼。有獸焉，其狀如狐而九尾，
+其音如嬰兒，能食人，食者不蠱。有鳥焉，其狀如鳩，其音若呵，名曰灌灌，佩之不
+惑。英水出焉，南流注於即翼之澤。其中多\href{http://www.example.com}{赤鱬}，其狀如魚而人面，其音如鴛鴦，
+食之不疥。
+
+%-----------------------------------------------------------
+\begin{center}
+\captionof*{table}{表格標題名}
+\begin{tabular}{llr}
+\toprule
+\multicolumn{2}{c}{姓名} \\
+\cmidrule(r){1-2}
+姓 & 名 & 級數 \\
+\midrule
+周 & 伯通 & $7.5$ \\
+李 & 莫愁 & $2$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+%-----------------------------------------------------------
+
+\end{mdframed}
+\end{minipage}\hfill % End the sidebar mini page
+%
+%----------------------------------------------------------------------------------------
+%	第一頁主版面
+%----------------------------------------------------------------------------------------
+%
+\begin{minipage}[t]{.66\linewidth} % Mini page taking up 66% of the actual page
+
+\hypertarget{firstnews}{\heading{第一則新聞標題}{6pt}} % \hypertarget provides a label to reference using \hyperlink{label}{link text}
+
+又東五百里，曰會稽之山，四方，其上多金玉，其下多砆石。勺水出焉，而南流注於湨。
+
+\begin{center}
+\parbox[t]{.70\linewidth}{\textit{又東三百四十里曰堯光之山，其陽多玉，其陰多金。有獸焉，其狀如人而彘鬣，穴居而冬蟄，其名曰猾褢，其音如斲木，見則縣有大繇。}}
+\end{center}
+
+\textit{《南次二經》}之首，曰柜山，西臨流黃，北望諸毗，東望長右。英水出焉，西南
+流注於赤水，其中多白玉，多丹粟。有獸焉，其狀如豚，有距，其音如狗吠，其名
+曰狸力，見則其縣多土功。有鳥焉，其狀如鴟而人手，其音如痺，其名曰鴸，其鳴
+自號也，見則其縣多放士。
+
+\begin{wrapfigure}[7]{l}[0pt]{0pt} % In-line figure with text wrapping around it
+\includegraphics[width=0.3\textwidth]{placeholder.jpg}
+\end{wrapfigure}
+
+東五百里，曰\textit{禱過之山}，其上多金玉，其下多犀、兕，多象。有鳥焉，其狀如鵁，
+而白首、三足、人面，其名曰瞿如，其鳴自號也。泿水出焉，而南流注於海。其中
+有虎蛟，其狀魚身而蛇尾，其音如鴛鴦，食者不腫，可以已痔。
+
+又東五百里，曰丹穴之山，其上多金玉。丹水出焉，而南流注於渤海。有鳥焉，
+其狀如雞，五采而文，名曰鳳皇，首文曰德，翼文曰義，背文曰禮，膺文曰仁，腹
+文曰信。是鳥也，飲食自然，自歌自舞，見則天下安寧。
+
+項籍少時，學書不成，去學劍，又不成。項梁怒之。籍曰：「書足以記名姓而已。
+劍一人敵，不足學，學萬人敵。」於是項梁乃教籍兵法，籍大喜，略知其意，又不
+肯竟學。項梁嘗有櫟陽逮，乃請蘄獄掾曹咎書抵櫟陽獄掾司馬欣，以故事得已。項
+梁殺人，與籍避仇於\href{http://www.example.com/}{吳中}。吳中賢士大夫皆出項梁下。每吳中有大繇役及喪，項梁
+常為主辦，陰以兵法部勒賓客及子弟，以是知其能。秦始皇帝游會稽，渡浙江，梁
+與籍俱觀。籍曰：「彼可取而代也。」梁掩其口，曰：「毋妄言，族矣！」梁以此奇
+籍。籍長八尺餘，力能扛鼎，才氣過人，雖吳中子弟皆已憚籍矣。
+
+%-----------------------------------------------------------
+
+\hypertarget{secondnews}{\heading{第二則新聞標題}{6pt}} % \hypertarget provides a label to reference using \hyperlink{label}{link text}
+
+項籍者，下相人也，字羽。初起時，年二十四。其季父項梁，梁父即楚將項燕，
+為秦將王翦所戮者也。項氏世世為楚將，封於項，故姓項氏。
+
+\begin{itemize}
+\item 又東五百里，曰咸陰之山，無草木，無水。
+\item 又東三百五十里，曰羽山，其下多水，其上多雨，無草木，多蝮虫。
+\item 又東五百里，曰僕勾之山，其上多金玉，其下多草木，無鳥獸，無水。
+\end{itemize}
+
+又東四百里，曰洵山，其陽多金，其陰多玉。有獸焉，其狀如羊而無口，不可殺
+也，其名曰䍺。洵水出焉，而南流注於閼之澤，其中多芘蠃。
+
+又東五百里，曰鹿吳之山，上無草木，多金石。澤更之水出焉，而南流注於滂
+水。水有獸焉，名曰蠱雕，其狀如雕而有角，其音如嬰兒之音，是食人。
+
+凡《南次二經》之首，自柜山至於漆吳之山，凡十七山，七千二百里。其神狀皆
+龍身而鳥首。其祠：毛用一璧瘞，糈用稌。
+
+《南次三經》之首，曰天虞之山，其下多水，不可以上。
+
+又東四百里，曰\href{http://www.example.com/}{令丘之山}，無草木，多火。其南有谷焉，曰中谷，條風自是出。
+有鳥焉，其狀如梟，人面四目而有耳，其名曰顒，其鳴自號也，見則天下大旱。
+
+\end{minipage} % End the main body - first page mini page
+
+%----------------------------------------------------------------------------------------
+%	第二頁主版面
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}[t]{.66\linewidth} % Mini page taking up 66% of the actual page
+
+\hypertarget{thirdnews}{\heading{第三新聞標題}{6pt}} % \hypertarget provides a label to reference using \hyperlink{label}{link text}
+
+\begin{multicols}{2} % Two-column layout
+
+\zhlipsum[6,7,8][name=xiangyu]
+
+\BackToContents % Link back to the contents of the newsletter
+
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%	短語方框
+%----------------------------------------------------------------------------------------
+
+\begin{mdframed}[style=intextbox,frametitle={}] % Sidebar box
+
+\hypertarget{descriptivebox}{\heading{短語方框}{0pt}} % \hypertarget provides a label to reference using \hyperlink{label}{link text}
+
+又東三百七十里，曰侖者之山，其上多金玉，其下多青䨼。有木焉，其狀如穀而
+赤理，其汗如漆，其味如飴，食者不飢，可以釋勞，其名曰白䓘，可以血玉。
+\begin{enumerate}
+\item 又東五百八十里，曰禺槀之山，多怪獸，多大蛇。
+\item 右南經之山志，大小凡四十山，萬六千三百八十里。
+\item 又東五百里，曰發爽之山，無草木，多水，多白猿。汎水出焉，而南流注於渤海。
+\item 又東四百里，至於旄山之尾，其南有谷，曰育遺，多怪鳥，凱風自是出。
+\item 又東四百里，至於非山之首，其上多金玉，無水，其下多蝮虫。
+\item 又東五百里，曰陽夾之山，無草木，多水。
+\item 又東五百里，曰灌湘之山，上多木，無草；多怪鳥，無獸。
+\item 又東三百七十里，曰侖者之山，其上多金玉，其下多青䨼。
+\end{enumerate}
+
+\BackToContents % Link back to the contents of the newsletter
+
+\end{mdframed}
+
+%----------------------------------------------------------------------------------------
+%	QUOTATION
+%----------------------------------------------------------------------------------------
+
+\hypertarget{quotation}{\large 自訂引言} % \hypertarget provides a label to reference using \hyperlink{label}{link text}
+
+\begin{quote}
+\textsl{『項籍者，下相人也，字羽。初起時，年二十四。其季父項梁，梁父即楚將項燕，
+為秦將王翦所戮者也。項氏世世為楚將，封於項，故姓項氏。』} —— \textrm{班固}
+\end{quote}
+
+%----------------------------------------------------------------------------------------
+
+\end{minipage}\hfill % End of the main body - second page mini page
+\begin{minipage}[t]{.30\linewidth} % Mini page taking up 30% of the actual page
+
+%----------------------------------------------------------------------------------------
+%	第二頁右邊框
+%----------------------------------------------------------------------------------------
+
+\begin{mdframed}[style=sidebar,frametitle={}] % Sidebar box
+
+\heading{規格}{0pt}
+
+班固：
+
+\begin{enumerate}
+\item 楚左尹項伯者，項羽季父也，素善留侯張良。
+\item 張良是時從沛公，項伯乃夜馳之沛公軍，私見張良，具告以事，欲呼張良與俱去。
+\item 曰：「毋從俱死也。」張良曰：「臣為韓王送沛公，沛公今事有急，亡去不義，不可不語。」良乃入，具告沛公。
+\item 沛公大驚，曰：「為之柰何？」張良曰：「誰為大王為此計者？」曰：「鯫生說我曰『距關，
+毋內諸侯，秦地可盡王也』。故聽之。
+
+\zhlipsum[10][name=trad]
+
+\end{enumerate}
+
+\BackToContents % Link back to the contents of the newsletter
+
+\end{mdframed}\hfill
+
+%----------------------------------------------------------------------------------------
+
+\centering
+\begin{minipage}[t]{.95\linewidth}
+\textbf{聯繫資訊：}\\
+雙手互搏資訊有限公司\\
+黃藥師路，\\
+桃花島\\
+\href{http://www.example.com}{http://www.ornarejustoultricies.com}\\
+\href{http://www.example.com}{http://www.elementumsapien.com}\\
+\href{http://www.example.com}{http://www.nuncultrices.com}
+\end{minipage}
+
+%----------------------------------------------------------------------------------------
+
+\end{minipage} % End of the sidebar mini page
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
