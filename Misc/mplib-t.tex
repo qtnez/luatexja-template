@@ -1,0 +1,64 @@
+% Example of METAPOST and luamplib。
+% 2021.05.04 by Edward G.J. Lee <edt1023@gmail.com>
+% MIT license.
+
+\documentclass{article}
+\usepackage[myfont]{ltj-zhfonts}  % 載入中文字型設定
+\usepackage{luamplib}  % lualatex 中處理 METAPOST code
+\usepackage{dtk-logos} % 各種 logo
+\mplibforcehmode       % 讓 \centering、\raggedleft 有作用。否使要用 \[……\]。
+\everymplib{beginfig(0);} %這樣就不必寫 mp code 中的開頭及結尾了。
+\everyendmplib{endfig;}
+
+\renewcommand{\figurename}{圖}
+
+\begin{document}
+
+\subsection*{使用\MP{}繪圖}
+
+使用\texttt{luamplib}來處理\MP{}圖檔很方便，在\texttt{mplibcode}環境內，可以直接寫入\MP{} code，或者直接\texttt{input}外部事先寫好的\texttt{.mp}檔亦可。\MP{}裡頭也可以處理中文。
+
+\begin{figure}
+\centering
+  \begin{mplibcode}
+    for i=1 step -.01 until 0:
+      fill fullcircle scaled (i*5cm) withcolor i*.8[red,white];
+    endfor
+    for j=0 upto 12:
+      draw (0,0){dir 30}..{dir 8j}(8cm,0) withcolor .6[blue,white];
+    endfor
+  \end{mplibcode}
+\caption{MyCJK 的封面}
+\end{figure}
+
+\begin{figure}
+\centering
+ \begin{mplibcode}
+   a=.7in; b=.5in;
+   z0=(0,0); z1=(a,0); z2=(0,b);
+   z0=.5[z1,z3]=.5[z2,z4];
+   draw z1..z2..z3..z4..cycle;
+   drawarrow z0..z1;
+   drawarrow z0..z2;
+   label.top(btex \small 橫軸 $x$ etex, .5[z0,z1]);
+   label.lft(btex \small 縱軸 $y$ etex, .5[z0,z2]);
+ \end{mplibcode}
+\caption{中文小字是\MP{}裡頭處理的}
+\end{figure}
+
+\begin{figure}
+\centering
+ \begin{mplibcode}
+   u:=3cm;
+   path p;
+   p = (0,1u)..(1u,0)...(0,-1u);
+   fill p{dir(157)}..(0,0){dir(23)}..{dir(157)}cycle;
+   draw p..(-1u,0)..cycle;
+   fill (0,-.6u)..(0.1u,-.5u)..(0,-.4u)..(-.1u,-.5u)..cycle withcolor white;
+   fill (0,.6u)..(.1u,.5u)..(0,.4u)..(-.1u,.5u)..cycle;
+   label.bot(btex \Large 仿太極陰陽魚圖 etex,(0,-1.2u));
+ \end{mplibcode}
+\caption{上面「仿太極陰陽魚圖」字樣是在\MP{}裡處理的}
+\end{figure}
+
+\end{document}
