@@ -10,7 +10,7 @@
 % http://www.LaTeXTemplates.com
 %
 % 2021.05.03
-% zh_TW(LuaLaTeX) version by Edward G.J. Lee <edt1023#gmail.com>
+% zh_TW(LuaLaTeX) version by Edward G.J. Lee <edt1023@gmail.com>
 %
 % License:
 % CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
@@ -18,7 +18,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %----------------------------------------------------------------------------------------
-%	REQUIRED PACKAGES
+%	所需套件
 %----------------------------------------------------------------------------------------
 
 % begin for zh_TW
@@ -45,11 +45,6 @@
               ItalicFont=TW-MOE-Std-Kai,
               ItalicFeatures={Scale=1.07},Scale=1.08]{cwTeXFangSong}
 
-% 中文縮格一個中文字
-\newlength{\zhind}
-\settowidth{\zhind}{龍}
-\setlength{\parindent}{\zhind}
-
 \usepackage{zhlipsum}  % 中文亂數假文
 
 \newcommand{\zhtoday}{% 中文日期
@@ -67,7 +62,7 @@
 \usepackage{float} % Required for forcing figures not to float with the [H] parameter
 
 %------------------------------------------------
-% Fonts
+% 字型
 
 %\usepackage{charter} % Use the Charter font as the main document font
 %\usepackage{courier} % Use the Courier font for \texttt (monospaced) only
@@ -75,13 +70,13 @@
 \usepackage[nomath]{libertinus}  % 英數字使用 Libertinus 字型
 
 %------------------------------------------------
-% List Separation
+% 列舉分隔
 
 \usepackage{enumitem} % Required to customize the list environments
 \setlist{noitemsep,nolistsep} % Remove spacing before, after and within lists for a compact look
 
 %------------------------------------------------
-% Figure and Table Caption Styles
+% 圖檔處理
 
 \usepackage{caption} % Required for changing caption styles
 \captionsetup[table]{labelfont={bf,sf},labelsep=period,justification=justified} % Specify the table caption style
@@ -89,7 +84,7 @@
 \setlength{\abovecaptionskip}{10pt} % Whitespace above captions
 
 %------------------------------------------------
-% Spacing Between Paragraphs
+% 段落間隔
 
 \makeatletter
 \usepackage{parskip}
@@ -98,7 +93,7 @@
 \makeatother
 
 %----------------------------------------------------------------------------------------
-%	PAGE MARGINS AND SPACINGS
+%	版面邊界及空間
 %----------------------------------------------------------------------------------------
 
 \textwidth = 7 in % Text width
@@ -113,7 +108,7 @@
 \pagestyle{empty} % Disable page numbering
 
 %----------------------------------------------------------------------------------------
-%	COLORS
+%	顏色
 %----------------------------------------------------------------------------------------
 
 \usepackage[dvipsnames,svgnames]{xcolor} % Required to specify custom colors
@@ -127,7 +122,7 @@
             urlcolor=altncolor]{hyperref} % Use the color defined above for all links
 
 %----------------------------------------------------------------------------------------
-%	BOX STYLES
+%	方框型態
 %----------------------------------------------------------------------------------------
 
 \usepackage[framemethod=TikZ]{mdframed}% Required for creating boxes
@@ -165,7 +160,7 @@
 }
 
 %----------------------------------------------------------------------------------------
-%	HEADING STYLE
+%	標題型態
 %----------------------------------------------------------------------------------------
 
 \newcommand{\heading}[2]{ % Define the \heading command
