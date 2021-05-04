@@ -11,12 +11,15 @@
 \everyendmplib{endfig;}
 
 \renewcommand{\figurename}{圖}
+\renewcommand{\baselinestretch}{1.46}
 
 \begin{document}
 
 \subsection*{使用\MP{}繪圖}
 
-使用\texttt{luamplib}來處理\MP{}圖檔很方便，在\texttt{mplibcode}環境內，可以直接寫入\MP{} code，或者直接\texttt{input}外部事先寫好的\texttt{.mp}檔亦可。\MP{}裡頭也可以處理中文。
+使用\texttt{luamplib}來處理\MP{}圖檔很方便，在\texttt{mplibcode}環境內，可以直接寫入\MP{} code，或者直接\texttt{input}外部事先寫好的\texttt{.mp}檔亦可。\MP{}裡頭也可以書寫中文，當然，實際上是{\tt luatex-ja}在處理中文的。
+
+\plainTeX{}也是可以使用，但要包在 \texttt{\backslash{}mplibcode}和 \texttt{\backslash{}endmplibcode}之間。
 
 \begin{figure}
 \centering
@@ -43,7 +46,7 @@
    label.top(btex \small 橫軸 $x$ etex, .5[z0,z1]);
    label.lft(btex \small 縱軸 $y$ etex, .5[z0,z2]);
  \end{mplibcode}
-\caption{中文小字是\MP{}裡頭處理的}
+\caption{中文小字是\MP{} code裡頭書寫的}
 \end{figure}
 
 \begin{figure}
@@ -58,7 +61,7 @@
    fill (0,.6u)..(.1u,.5u)..(0,.4u)..(-.1u,.5u)..cycle;
    label.bot(btex \Large 仿太極陰陽魚圖 etex,(0,-1.2u));
  \end{mplibcode}
-\caption{上面「仿太極陰陽魚圖」字樣是在\MP{}裡處理的}
+\caption{上面「仿太極陰陽魚圖」字樣是在\MP{} code裡書寫的}
 \end{figure}
 
 \end{document}
