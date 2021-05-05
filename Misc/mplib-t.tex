@@ -17,9 +17,15 @@
 
 \subsection*{使用\MP{}繪圖}
 
-使用\texttt{luamplib}來處理\MP{}圖檔很方便，在\texttt{mplibcode}環境內，可以直接寫入\MP{} code，或者直接\texttt{input}外部事先寫好的\texttt{.mp}檔亦可。\MP{}裡頭也可以書寫中文，當然，實際上是{\tt luatex-ja}在處理中文的。
+使用\texttt{luamplib}來處理\MP{}圖檔很方便，在\texttt{mplibcode}環境內，
+可以直接寫入\MP{} code，或者直接\texttt{input}外部事先寫好的\texttt{.mp}檔
+亦可。\MP{}裡頭也可以書寫中文，當然，實際上是{\tt luatex-ja}在處理中文的，
+所要在裡頭書寫中文，必需用\texttt{btex}...\texttt{etex}包住。
 
-\plainTeX{}也是可以使用，但要包在 \texttt{\backslash{}mplibcode}和 \texttt{\backslash{}endmplibcode}之間。
+\plainTeX{}也是可以使用，但要包在 \texttt{\backslash{}mplibcode}和 \texttt{\backslash{}endmplibcode}
+之間\footnote{使用\plainTeX{}又要處理中文的話，要 \texttt{\backslash{}input luatexja-core.sty}。}。\MP{}等於是\LuaTeX{}引擎內建的繪圖工具。
+系統上有一個\texttt{metafun-p.pdf}檔案，
+雖然是為\ConTeXt{}寫的，但\MP{}的語法是一樣的，可以參考。
 
 \begin{figure}
 \centering
@@ -43,8 +49,8 @@
    draw z1..z2..z3..z4..cycle;
    drawarrow z0..z1;
    drawarrow z0..z2;
-   label.top(btex \small 橫軸 $x$ etex, .5[z0,z1]);
-   label.lft(btex \small 縱軸 $y$ etex, .5[z0,z2]);
+   label.top(btex \footnotesize 橫軸 $x$ etex, .5[z0,z1]);
+   label.lft(btex \footnotesize 縱軸 $y$ etex, .5[z0,z2]);
  \end{mplibcode}
 \caption{中文小字是\MP{} code裡頭書寫的}
 \end{figure}
@@ -62,6 +68,27 @@
    label.bot(btex \Large 仿太極陰陽魚圖 etex,(0,-1.2u));
  \end{mplibcode}
 \caption{上面「仿太極陰陽魚圖」字樣是在\MP{} code裡書寫的}
+\end{figure}
+
+\begin{figure}
+\centering
+ \begin{mplibcode}
+    u := 1cm;
+    path sqr;
+    sqr := unitsquare scaled u;
+    for i=0 upto 10: % for loop 迴圈，請注意這裡是冒號
+      label.top(decimal(i/10), ((i+1/2)*u,1u));
+      fill sqr shifted (i*u, 0) withcolor i*0.1red;
+      fill sqr shifted (i*u, -1.2u) withcolor i*0.1green;
+      fill sqr shifted (i*u, -2.4u) withcolor i*0.1blue;
+      fill sqr shifted (i*u, -3.6u) withcolor i*0.1white;
+    endfor
+    label.lft(btex 紅 etex, (0,.6u));
+    label.lft(btex 綠 etex, (0,-.6u));
+    label.lft(btex 藍 etex, (0,-2u));
+    label.lft(btex 灰 etex, (0,-3u));
+ \end{mplibcode}
+\caption{簡單的色階圖}
 \end{figure}
 
 \end{document}
