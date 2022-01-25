@@ -46,7 +46,7 @@
 \addtolength{\topmargin}{-1.4in}
 \renewcommand{\baselinestretch}{1.46}
 
-% 中文縮排二個中文字。
+% 中文縮排二個中文字。不能用 2em，會略小於二個中文字的寬度。
 \newlength{\zhind}
 \settowidth{\zhind}{終極}
 \setlength{\parindent}{\zhind}
