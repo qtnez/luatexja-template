@@ -50,7 +50,7 @@ def styver(sty)
   open(sty) do |file|
     file.each_line do |line|
       if line =~ /\\def\s*\\RInfo/
-        thever = $'.gsub(/\{|\}/,'')
+        thever = $'.gsub(/\{|\}|\\ExplFileDescription/,'')
         break
 #      elsif line =~ /\\.*def\s*\\.*fileversion|\\.*def\s*\\FMithmInfo|\\.*def\s*\\fontinstversion/
       elsif line =~ /\\.*def\s*\\.*version|\\.*def\s*\\FMithmInfo/
