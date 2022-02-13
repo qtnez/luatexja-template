@@ -292,7 +292,7 @@ TSWLatexianTemp*
 # glossaries
 *.glstex
 
-# my vim note style files.
+# my vim note style files by LGJ.
 *.note
 
 # End of https://www.toptal.com/developers/gitignore/api/latex

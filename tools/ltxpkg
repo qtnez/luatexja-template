@@ -6,6 +6,7 @@
 #
 # This code is Public Domain.
 # $Id: ltxpkg.rb,v 1.5 2005/09/09 09:34:27 edt1023 Exp $
+# Sun 02/13/2022 修正 Version 的判斷。
 
 # 取得命令列參數 basename
 Thisver='1.0'
@@ -51,7 +52,8 @@ def styver(sty)
       if line =~ /\\def\s*\\RInfo/
         thever = $'.gsub(/\{|\}/,'')
         break
-      elsif line =~ /\\.*def\s*\\.*fileversion|\\.*def\s*\\FMithmInfo|\\.*def\s*\\fontinstversion/
+#      elsif line =~ /\\.*def\s*\\.*fileversion|\\.*def\s*\\FMithmInfo|\\.*def\s*\\fontinstversion/
+      elsif line =~ /\\.*def\s*\\.*version|\\.*def\s*\\FMithmInfo/
         thever = $'.gsub(/\{|\}/,'')
         break
       elsif line =~ /^\s*\\ProvidesPackage|^\s*\\ProvidesFile|^\s*\\ProvidesClass/
