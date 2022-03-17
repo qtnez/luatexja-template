@@ -4,26 +4,29 @@
 % 有了 match 參數，正常 LaTeX 指令取字時，才會去做中文字型的匹配。
 \usepackage[match]{luatexja-fontspec}
 \setmainjfont[BoldFont=Noto Sans CJK TC Medium,
-              YokoFeatures = {JFM = zh_TW/quanjiao},
-              AltFont={{Range="20000-"2A6DF,Font=HanaMinB},  % CJK ExtB
-                       {Range="FF1F-"FF1F,Font=HanaMinA},    %一點明體的驚嘆號及問號過大
-                       {Range="FF01-"FF01,Font=HanaMinA},    %用 HanaMinA 取代
-                       {Range="3010-"3011,Font=HanaMinA},    %粗方括號
-                       {Range="2A700-"2B73F,Font=HanaMinB},  % CJK ExtC
-                       {Range="2B740-"2B81F,Font=HanaMinB}}, % CJK ExtD
-              BoldItalicFont=I.Ngaan,
-              ItalicFont=TW-MOE-Std-Kai,
-              ItalicFeatures={Scale=1.07}]{I.MingCP}
+         YokoFeatures = {JFM = zh_TW/quanjiao},
+         AltFont={{Range="20000-"2A6DF,Font=HanaMinB},  % CJK ExtB
+                  {Range="FE30-"FE4F,Font=HanaMinA},    %一些全型符號
+                  {Range="FF1F-"FF1F,Font=HanaMinA},    %一點明體的驚嘆號及問號過大
+                  {Range="FF01-"FF01,Font=HanaMinA},    %用 HanaMinA 取代
+                  {Range="2200-"22FF,Font=HanaMinA},    %全型數學運算子
+                  {Range="2580-"259F,Font=HanaMinA},    %全型方塊
+                  {Range="3010-"3011,Font=HanaMinA},    %粗方括號
+                  {Range="2A700-"2B73F,Font=HanaMinB},  % CJK ExtC
+                  {Range="2B740-"2B81F,Font=HanaMinB}}, % CJK ExtD
+         BoldItalicFont=I.Ngaan,
+         ItalicFont=TW-MOE-Std-Kai,
+         ItalicFeatures={Scale=1.07}]{I.MingCP}
 \setsansjfont[BoldFont=Noto Sans CJK TC Medium,
-              YokoFeatures = {JFM = zh_TW/quanjiao},
-              BoldItalicFont=I.Ngaan,
-              ItalicFont=TW-MOE-Std-Kai,
-              ItalicFeatures={Scale=1.07}]{Taipei Sans TC Beta Light}
+         YokoFeatures = {JFM = zh_TW/quanjiao},
+         BoldItalicFont=I.Ngaan,
+         ItalicFont=TW-MOE-Std-Kai,
+         ItalicFeatures={Scale=1.07}]{Taipei Sans TC Beta Light}
 \setmonojfont[BoldFont=Noto Sans CJK TC Medium,
-              YokoFeatures = {JFM = zh_TW/quanjiao},
-              BoldItalicFont=I.Ngaan,
-              ItalicFont=TW-MOE-Std-Kai,
-              ItalicFeatures={Scale=1.07},Scale=1.08]{cwTeXFangSong}
+         YokoFeatures = {JFM = zh_TW/quanjiao},
+         BoldItalicFont=I.Ngaan,
+         ItalicFont=TW-MOE-Std-Kai,
+         ItalicFeatures={Scale=1.07},Scale=1.08]{cwTeXFangSong}
 % 防止有些字一點明體沒有時取用。
 \setjfontfamily\hminga{HanaMinA}
 \setjfontfamily\hmingb{HanaMinB}
